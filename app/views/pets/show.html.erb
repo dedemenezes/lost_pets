@@ -1,0 +1,8 @@
+<h1>Lost pet</h1>
+<p>Color: <%= @pet.color %></p>
+<p>Species: <%= @pet.species %></p>
+<p>Location: <%= @pet.location %></p>
+<p>Found: <%= pluralize(@pet.found_days_ago, 'day') %> ago</p>
+
+<%= link_to 'Back to all pets', pets_path %> |
+<%= link_to "Edit #{@pet.species}", edit_pet_path(@pet) %>

@@ -1,0 +1,9 @@
+<h1>Lost Kitties</h1>
+
+<ul>
+  <% @pets.each do |pet| %>
+    <li><%= link_to pet.color, pet_path(pet) %> <%= link_to 'Remove pet', pet_path(pet), data: { turbo_method: :delete, turbo_confirm: 'Are you sure?'} %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Report pet', new_pet_path %>

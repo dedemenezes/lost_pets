@@ -1,0 +1,7 @@
+<%= simple_form_for pet do |f| %>
+  <%= f.input :color %>
+  <%= f.input :location %>
+  <%= f.input :found_on %>
+  <%= f.input :species, collection: Pet::SPECIES %>
+  <%= f.submit %>
+<% end %>
